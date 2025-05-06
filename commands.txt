@@ -1,19 +1,51 @@
-Usage Examples:
+# DaySchedule API Sync Tool - Usage Examples
+
+## Basic Usage
 
 1. Interactive Mode:
-   python "Sync Dayscedule API/sync_dayscedule.py"
+   ```
+   python sync_dayscedule.py
+   ```
 
 2. Incremental Sync (Default):
-   python "Sync Dayscedule API/sync_dayscedule.py" --sync-mode incremental
+   ```
+   python sync_dayscedule.py --sync-mode incremental
+   ```
 
 3. Full Sync:
-   python "Sync Dayscedule API/sync_dayscedule.py" --sync-mode full
+   ```
+   python sync_dayscedule.py --sync-mode full
+   ```
+
+## Testing & Development
 
 4. Test Mode with Limited Bookings:
-   python "Sync Dayscedule API/sync_dayscedule.py" --test --limit 10
+   ```
+   python sync_dayscedule.py --test --limit 10
+   ```
 
-5. Scheduled Mode (Runs Every Hour):
-   python "Sync Dayscedule API/sync_dayscedule.py" --schedule --interval 60
+5. Force Processing of All Bookings:
+   ```
+   python sync_dayscedule.py --force-process
+   ```
 
-6. Scheduled Test Mode (For Development):
-   python "Sync Dayscedule API/sync_dayscedule.py" --schedule --interval 5 --test --limit 5
+## Scheduled Execution
+
+6. Scheduled Mode (Runs Every Hour):
+   ```
+   python sync_dayscedule.py --schedule --interval 60
+   ```
+
+7. Scheduled Test Mode (For Development):
+   ```
+   python sync_dayscedule.py --schedule --interval 5 --test --limit 5
+   ```
+
+## Output
+
+The script will save all booking data to `day_schedule_bookings.json` in the current directory.
+The data includes:
+- Booking ID
+- Store name (extracted from booking URL)
+- Status (confirmed, pending, canceled)
+- Patient information (name, email, phone, etc.)

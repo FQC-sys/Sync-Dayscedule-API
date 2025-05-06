@@ -14,7 +14,7 @@ from tqdm import tqdm
 # === CONFIGURATION ===
 API_KEY = "ejRxL4P2ftssWogeMD31tagAYvJMQVfM"  # Replace with your API key
 BASE_URL = "https://api.dayschedule.com/v1"
-OUTPUT_FILE = "Sync Dayscedule API/day_schedule_bookings.json"
+OUTPUT_FILE = "day_schedule_bookings.json"  # Save in the current directory
 DELAY_BETWEEN_REQUESTS = 0.3  # 300ms to stay under Enterprise rate limit
 MAX_CONCURRENT_REQUESTS = 5  # Limit concurrent requests to avoid rate limiting
 
