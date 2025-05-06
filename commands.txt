@@ -1,0 +1,19 @@
+Usage Examples:
+
+1. Interactive Mode:
+   python "Sync Dayscedule API/sync_dayscedule.py"
+
+2. Incremental Sync (Default):
+   python "Sync Dayscedule API/sync_dayscedule.py" --sync-mode incremental
+
+3. Full Sync:
+   python "Sync Dayscedule API/sync_dayscedule.py" --sync-mode full
+
+4. Test Mode with Limited Bookings:
+   python "Sync Dayscedule API/sync_dayscedule.py" --test --limit 10
+
+5. Scheduled Mode (Runs Every Hour):
+   python "Sync Dayscedule API/sync_dayscedule.py" --schedule --interval 60
+
+6. Scheduled Test Mode (For Development):
+   python "Sync Dayscedule API/sync_dayscedule.py" --schedule --interval 5 --test --limit 5
